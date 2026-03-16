@@ -6894,7 +6894,7 @@ function numeroPorExtenso(n) {
         var t = this;
         this.config.videos && 0 < this.config.videos.length && this.$nextTick((function () {
           t.$refs.videoPlayer && t.$refs.videoPlayer.play()
-        })), console.log("App path:", m.app.getAppPath()), console.log("__dirname:", e), console.log("Trying to play video with relative path: ../../static/videos/Video_teste.mp4")
+        }))
       }
     }
   }).call(this, "/")
