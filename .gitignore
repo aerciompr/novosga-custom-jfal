@@ -1,0 +1,10 @@
+# OS
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Local overrides
+.env
+.env.*
