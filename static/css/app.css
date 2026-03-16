@@ -12,3 +12,13 @@ textarea,
 .novosga-default .grid-container .footer-row div .logo-container img.footer-logo {
   object-fit: contain;
 }
+
+.novosga-default .grid-container .footer-row div:first-child {
+  justify-content: center !important;
+  padding-left: 0 !important;
+}
+
+.novosga-default .grid-container .footer-row .logo-container {
+  width: 100%;
+  justify-content: center !important;
+}
