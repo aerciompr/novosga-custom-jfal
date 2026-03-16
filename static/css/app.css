@@ -5,6 +5,17 @@
   --jf-white: #ffffff;
 }
 
+html,
+body,
+button,
+input,
+select,
+textarea,
+.novosga-default,
+.novosga-default * {
+  font-family: "Century Gothic", CenturyGothic, "Apple Gothic", "Segoe UI", Arial, sans-serif !important;
+}
+
 body {
   background: linear-gradient(135deg, #f3f6fa 0%, #e8edf4 100%) !important;
 }
@@ -38,9 +49,13 @@ a,
 .novosga-default .grid-container .video-content,
 .novosga-default .grid-container .video-content .content-column .content-top,
 .novosga-default .grid-container .video-content .content-column .content-bottom,
-.novosga-default .grid-container .footer-row div:first-child,
-.novosga-default .grid-container .footer-row div:last-child {
+.novosga-default .grid-container .footer-row div:first-child {
   background: var(--jf-blue) !important;
+  color: var(--jf-white) !important;
+}
+
+.novosga-default .grid-container .footer-row div:last-child {
+  background: var(--jf-gray) !important;
   color: var(--jf-white) !important;
 }
 
