@@ -28,6 +28,16 @@ Painel NOVOSGA customizado com identidade visual da Justiça Federal de Alagoas,
    - `TZ=America/Sao_Paulo`
 6. Clique em `Deploy the stack`.
 
+## Deploy via Portainer (Image pronta GHCR)
+
+Este repositório publica automaticamente a imagem em:
+- `ghcr.io/aerciompr/novosga-custom-jfal:latest`
+
+No Portainer:
+1. `Stacks` > `Add stack` > `Web editor`
+2. Cole o conteúdo de `portainer-stack.yml`
+3. Ajuste `PORT` se necessário e faça o deploy
+
 ## Configuração no painel
 
 Após abrir o painel, acesse as configurações e ajuste:

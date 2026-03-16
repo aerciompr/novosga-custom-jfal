@@ -1,0 +1,9 @@
+services:
+  painel-novosga-jfal:
+    image: ghcr.io/aerciompr/novosga-custom-jfal:latest
+    container_name: painel-novosga-jfal
+    restart: unless-stopped
+    ports:
+      - "${PORT:-8088}:80"
+    environment:
+      - TZ=${TZ:-America/Sao_Paulo}
