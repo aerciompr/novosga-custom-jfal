@@ -1,10 +1,3 @@
-:root {
-  --jf-blue: #002f6c;
-  --jf-green: #007a33;
-  --jf-gray: #97999f;
-  --jf-white: #ffffff;
-}
-
 html,
 body,
 button,
@@ -16,67 +9,6 @@ textarea,
   font-family: "Century Gothic", CenturyGothic, "Apple Gothic", "Segoe UI", Arial, sans-serif !important;
 }
 
-body {
-  background: linear-gradient(135deg, #f3f6fa 0%, #e8edf4 100%) !important;
-}
-
-.ui.inverted.menu {
-  background-color: var(--jf-blue) !important;
-}
-
-.ui.inverted.menu .item {
-  color: var(--jf-white) !important;
-}
-
-.ui.button.primary {
-  background-color: var(--jf-green) !important;
-  border-color: var(--jf-green) !important;
-  color: var(--jf-white) !important;
-}
-
-h1.brand,
-a,
-.ui.header {
-  color: var(--jf-blue) !important;
-}
-
-/* Painel principal NOVOSGA */
-.novosga-default .layout-content {
-  background: linear-gradient(140deg, #eef3f9 0%, #e4ecf5 100%) !important;
-}
-
-.novosga-default .grid-container .header-row,
-.novosga-default .grid-container .video-content,
-.novosga-default .grid-container .video-content .content-column .content-top,
-.novosga-default .grid-container .video-content .content-column .content-bottom,
-.novosga-default .grid-container .footer-row div:first-child {
-  background: var(--jf-blue) !important;
-  color: var(--jf-white) !important;
-}
-
-.novosga-default .grid-container .footer-row div:last-child {
-  background: var(--jf-gray) !important;
-  color: var(--jf-white) !important;
-}
-
-.novosga-default .grid-container .video-content .content-column .content-bottom .history-container .history .message {
-  border-left-color: var(--jf-green) !important;
-}
-
-.novosga-default .grid-container .video-content .content-column .content-top .featured-container .featured,
-.novosga-default .grid-container .video-content .content-column .content-top .featured-container .client-name,
-.novosga-default .grid-container .video-content .content-column .content-bottom .history-container .history .message .title,
-.novosga-default .grid-container .video-content .content-column .content-bottom .history-container .history .message .subtitle {
-  color: var(--jf-white) !important;
-}
-
-.novosga-default .grid-container .video-content .video-container {
-  border: 4px solid var(--jf-green) !important;
-  box-shadow: 0 8px 24px rgba(0, 47, 108, 0.28) !important;
-  border-radius: 10px !important;
-  overflow: hidden !important;
-}
-
-.novosga-default .clock .date span {
-  color: #d9e3f0 !important;
+.novosga-default .grid-container .footer-row div .logo-container img.footer-logo {
+  object-fit: contain;
 }
