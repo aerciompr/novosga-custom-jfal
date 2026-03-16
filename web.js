@@ -7208,7 +7208,11 @@ function numeroPorExtenso(n) {
       }, [n("div", {
         staticClass: "grid-container"
       }, [e._m(0), e._v(" "), n("div", {
-        staticClass: "video-content"
+        staticClass: "video-content",
+        style: {
+          "background-color": e.color("pageBgColor"),
+          color: e.color("pageFontColor")
+        }
       }, [n("div", {
         staticClass: "video-container"
       }, [n("VideoPlayer", {
@@ -7218,16 +7222,24 @@ function numeroPorExtenso(n) {
       })], 1), e._v(" "), n("div", {
         staticClass: "content-column"
       }, [n("div", {
-        staticClass: "content-top"
+        staticClass: "content-top",
+        style: {
+          "background-color": e.color("sidebarBgColor", "pageBgColor"),
+          color: e.color("sidebarFontColor", "pageFontColor")
+        }
       }, [n("h2", [e._v("Senha Chamada")]), e._v(" "), n("div", {
         staticClass: "featured-container"
       }, [n("Featured", {
         attrs: {
           message: e.message,
-          "font-color": "#000000"
+          "font-color": e.color("featuredFontColor", "pageFontColor")
         }
       })], 1)]), e._v(" "), n("div", {
-        staticClass: "content-bottom"
+        staticClass: "content-bottom",
+        style: {
+          "background-color": e.color("sidebarBgColor", "pageBgColor"),
+          color: e.color("sidebarFontColor", "pageFontColor")
+        }
       }, [n("div", {
         staticClass: "history-container"
       }, [n("h2", {
@@ -7235,19 +7247,31 @@ function numeroPorExtenso(n) {
       }, [e._v("Histórico")]), e._v(" "), n("History", {
         attrs: {
           messages: e.messages.slice(0, 3),
-          "font-color-normal": "#000000",
-          "font-color-priority": "#E84910",
+          "font-color-normal": e.config.historyFontColorNormal || e.color("historyFontColor", "pageFontColor"),
+          "font-color-priority": e.config.historyFontColorPriority || e.color("historyFontColor", "pageFontColor"),
           "show-message-description": !1
         }
       })], 1)])])]), e._v(" "), n("div", {
-        staticClass: "footer-row"
+        staticClass: "footer-row",
+        style: {
+          "background-color": e.color("footerBgColor", "pageBgColor"),
+          color: e.color("footerFontColor", "pageFontColor")
+        }
       }, [e._m(1), e._v(" "), n("div", {
-        staticClass: "col-31"
+        staticClass: "col-31",
+        style: {
+          "background-color": e.color("footerBgColor", "pageBgColor"),
+          color: e.color("footerFontColor", "pageFontColor")
+        }
       }, [n("Weather")], 1), e._v(" "), n("div", {
-        staticClass: "col-38"
+        staticClass: "col-38",
+        style: {
+          "background-color": e.color("clockBgColor", "footerBgColor"),
+          color: e.color("clockFontColor", "footerFontColor")
+        }
       }, [n("Clock", {
         attrs: {
-          "font-color": "#FFFFFF",
+          "font-color": e.color("clockFontColor", "footerFontColor"),
           "show-seconds": !0,
           "show-date": !0,
           "date-format": "DD/MM/YYYY",
@@ -19195,7 +19219,7 @@ function numeroPorExtenso(n) {
                   }, e.error = !1) : e.error = !0, t.next = 15;
                   break;
                 case 11:
-                  t.prev = 11, t.t0 = t.catch(0), console.error("Error fetching weather:", t.t0), e.error = !0;
+                  t.prev = 11, t.t0 = t.catch(0), e.error = !0;
                 case 15:
                 case "end":
                   return t.stop()
@@ -19207,7 +19231,7 @@ function numeroPorExtenso(n) {
         }
       },
       mounted: function () {
-        this.fetchWeather(), this.timer = setInterval(this.fetchWeather, 6e5)
+        this.$store.state.config.weatherApiUrl && (this.fetchWeather(), this.timer = setInterval(this.fetchWeather, 6e5))
       },
       beforeDestroy: function () {
         this.timer && clearInterval(this.timer)
@@ -21434,7 +21458,7 @@ function numeroPorExtenso(n) {
   var r = n(41);
   n.n(r).a
 }, function (e, t, n) {
-  (e.exports = n(10)(!1)).push([e.i, ".novosga-default .layout-content{position:fixed;width:100vw;height:100vh;overflow:hidden}.novosga-default .grid-container{display:grid;width:100vw;height:100vh;grid-template-rows:5vh 75vh 20vh}.novosga-default .grid-container>div{display:flex;width:100vw}.novosga-default .grid-container .col-31{width:31vw;padding:1vh 1vw}.novosga-default .grid-container .col-38{width:38vw;padding:1vh 1vw}.novosga-default .grid-container .header-row{background:#002F6C;color:#fff;height:5vh}.novosga-default .grid-container .header-row div{display:flex;align-items:center;justify-content:center;font-weight:700}.novosga-default .grid-container .video-content{display:flex;width:100vw;height:75vh;padding-left:30px;background:#002F6C}.novosga-default .grid-container .video-content .video-container{width:62vw;height:100%;background:#000;display:flex;justify-content:center;align-items:center}.novosga-default .grid-container .video-content .video-container video{width:100%;height:100%;object-fit:contain}.novosga-default .grid-container .video-content .content-column{width:38vw;display:flex;flex-direction:column}.novosga-default .grid-container .video-content .content-column .content-top{height:66.7%;background:#002F6C;color:#fff;display:flex;flex-direction:column;align-items:center;overflow:hidden;position:relative}.novosga-default .grid-container .video-content .content-column .content-top h2{font-size:3vh;font-weight:700;margin:1rem 0;color:#fff;text-transform:uppercase;position:relative;z-index:2}.novosga-default .grid-container .video-content .content-column .content-top .featured-container{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;z-index:1;flex-direction:column}.novosga-default .grid-container .video-content .content-column .content-top .featured-container .client-name{font-size:3vh;color:#fff;margin-bottom:1vh;text-align:center;width:100%}.novosga-default .grid-container .video-content .content-column .content-top .featured-container .featured{width:100%;display:flex;align-items:center;justify-content:center}.novosga-default .grid-container .video-content .content-column .content-bottom{height:33.3%;background:#002F6C;color:#fff;display:flex;align-items:flex-start;justify-content:center;padding:1rem}.novosga-default .grid-container .video-content .content-column .content-bottom .history-container{width:100%;display:flex;flex-direction:column;align-items:center;height:100%}.novosga-default .grid-container .video-content .content-column .content-bottom .history-container .history-title{font-size:3vh;font-weight:700;margin-bottom:1rem;color:#fff;text-transform:uppercase;margin-top:.5rem}.novosga-default .grid-container .video-content .content-column .content-bottom .history-container .history{margin-top:auto;margin-bottom:auto;transform:translateY(-25%);width:75%;display:flex;justify-content:space-around;align-items:center}.novosga-default .grid-container .video-content .content-column .content-bottom .history-container .history .message{flex:1;margin:0 .5rem;text-align:center;border:none;border-left:15px solid #007A33;padding:0;width:1vw;background-color:transparent}.novosga-default .grid-container .video-content .content-column .content-bottom .history-container .history .message span{display:block;text-align:center;background:transparent}.novosga-default .grid-container .video-content .content-column .content-bottom .history-container .history .message .title{font-size:4vh;font-weight:700;color:#fff}.novosga-default .grid-container .video-content .content-column .content-bottom .history-container .history .message .subtitle{font-size:2.5vh;color:#fff}.novosga-default .grid-container .footer-row{background:rgba(0,0,0,.05);height:20vh}.novosga-default .grid-container .footer-row div{background:#002F6C;color:#fff;display:flex;align-items:center;font-weight:700}.novosga-default .grid-container .footer-row div:first-child{justify-content:flex-start;padding-left:2vh}.novosga-default .grid-container .footer-row div:last-child{justify-content:center}.novosga-default .grid-container .footer-row div .logo-container{display:flex;align-items:center;justify-content:flex-start}.novosga-default .grid-container .footer-row div .logo-container img.footer-logo{height:10vh;width:auto;object-fit:contain}.novosga-default .grid-container .col-31,.novosga-default .grid-container .col-38{border:none}.novosga-default .clock .time span{font-size:2.5vw}.novosga-default .clock .time span.hours{font-weight:700}.novosga-default .clock .time span.seconds{font-style:italic}.novosga-default .clock .date{text-align:center}.novosga-default .clock .date span{font-size:1.3vw;font-weight:700}.novosga-default .featured-column>section.video-section{height:40vh;background:#000;display:flex;justify-content:center;align-items:center}.novosga-default .featured-column>header{height:40vh}.novosga-default .featured-column>footer{height:20vh;padding:5vh}.novosga-default .featured-column>footer img{height:10vh}.novosga-default .featured-column>footer h1{font-size:5vh;padding:2vh 0 0 5vh}.novosga-default .featured-column .featured-message{text-align:center}.novosga-default .featured-column .featured-message .title{font-size:30vh;font-weight:700}.novosga-default .featured-column .featured-message .description,.novosga-default .featured-column .featured-message .subtitle{font-size:10vh}.novosga-default .history-column{height:100vh}.novosga-default .history-column>header{height:80vh;padding:1rem 0}.novosga-default .history-column>footer{height:20vh;padding:1rem 0;text-align:center;background:rgba(0,0,0,.1)}.novosga-default .history-column *{color:#2c3e50}.novosga-default .history-column .title{text-align:center;font-weight:700}.novosga-default .history-column .message{background-color:transparent;border-left:8px solid rgba(0,0,0,.3);padding-left:2rem;margin-bottom:1rem}.novosga-default .history-column .empty p{font-style:italic;text-align:center}.novosga-default .history-column .history .message{background:none}.novosga-default .history-column .history .message span{text-align:left;display:block}.novosga-default .history-column .history .message .title{font-size:8vh;font-weight:700}.novosga-default .history-column .history .message .subtitle{font-size:4vh;font-style:italic}", ""])
+  (e.exports = n(10)(!1)).push([e.i, ".novosga-default .layout-content{position:fixed;width:100vw;height:100vh;overflow:hidden}.novosga-default .grid-container{display:grid;width:100vw;height:100vh;grid-template-rows:5vh 75vh 20vh}.novosga-default .grid-container>div{display:flex;width:100vw}.novosga-default .grid-container .col-31{width:31vw;padding:1vh 1vw}.novosga-default .grid-container .col-38{width:38vw;padding:1vh 1vw}.novosga-default .grid-container .header-row{background:transparent;color:#fff;height:5vh}.novosga-default .grid-container .header-row div{display:flex;align-items:center;justify-content:center;font-weight:700}.novosga-default .grid-container .video-content{display:flex;width:100vw;height:75vh;padding-left:30px;background:transparent}.novosga-default .grid-container .video-content .video-container{width:62vw;height:100%;background:#000;display:flex;justify-content:center;align-items:center}.novosga-default .grid-container .video-content .video-container video{width:100%;height:100%;object-fit:contain}.novosga-default .grid-container .video-content .content-column{width:38vw;display:flex;flex-direction:column}.novosga-default .grid-container .video-content .content-column .content-top{height:66.7%;background:transparent;color:#fff;display:flex;flex-direction:column;align-items:center;overflow:hidden;position:relative}.novosga-default .grid-container .video-content .content-column .content-top h2{font-size:3vh;font-weight:700;margin:1rem 0;color:#fff;text-transform:uppercase;position:relative;z-index:2}.novosga-default .grid-container .video-content .content-column .content-top .featured-container{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;z-index:1;flex-direction:column}.novosga-default .grid-container .video-content .content-column .content-top .featured-container .client-name{font-size:3vh;color:#fff;margin-bottom:1vh;text-align:center;width:100%}.novosga-default .grid-container .video-content .content-column .content-top .featured-container .featured{width:100%;display:flex;align-items:center;justify-content:center}.novosga-default .grid-container .video-content .content-column .content-bottom{height:33.3%;background:transparent;color:#fff;display:flex;align-items:flex-start;justify-content:center;padding:1rem}.novosga-default .grid-container .video-content .content-column .content-bottom .history-container{width:100%;display:flex;flex-direction:column;align-items:center;height:100%}.novosga-default .grid-container .video-content .content-column .content-bottom .history-container .history-title{font-size:3vh;font-weight:700;margin-bottom:1rem;color:#fff;text-transform:uppercase;margin-top:.5rem}.novosga-default .grid-container .video-content .content-column .content-bottom .history-container .history{margin-top:auto;margin-bottom:auto;transform:translateY(-25%);width:75%;display:flex;justify-content:space-around;align-items:center}.novosga-default .grid-container .video-content .content-column .content-bottom .history-container .history .message{flex:1;margin:0 .5rem;text-align:center;border:none;border-left:15px solid #007A33;padding:0;width:1vw;background-color:transparent}.novosga-default .grid-container .video-content .content-column .content-bottom .history-container .history .message span{display:block;text-align:center;background:transparent}.novosga-default .grid-container .video-content .content-column .content-bottom .history-container .history .message .title{font-size:4vh;font-weight:700;color:#fff}.novosga-default .grid-container .video-content .content-column .content-bottom .history-container .history .message .subtitle{font-size:2.5vh;color:#fff}.novosga-default .grid-container .footer-row{background:rgba(0,0,0,.05);height:20vh}.novosga-default .grid-container .footer-row div{background:transparent;color:#fff;display:flex;align-items:center;font-weight:700}.novosga-default .grid-container .footer-row div:first-child{justify-content:flex-start;padding-left:2vh}.novosga-default .grid-container .footer-row div:last-child{justify-content:center}.novosga-default .grid-container .footer-row div .logo-container{display:flex;align-items:center;justify-content:flex-start}.novosga-default .grid-container .footer-row div .logo-container img.footer-logo{height:10vh;width:auto;object-fit:contain}.novosga-default .grid-container .col-31,.novosga-default .grid-container .col-38{border:none}.novosga-default .clock .time span{font-size:2.5vw}.novosga-default .clock .time span.hours{font-weight:700}.novosga-default .clock .time span.seconds{font-style:italic}.novosga-default .clock .date{text-align:center}.novosga-default .clock .date span{font-size:1.3vw;font-weight:700}.novosga-default .featured-column>section.video-section{height:40vh;background:#000;display:flex;justify-content:center;align-items:center}.novosga-default .featured-column>header{height:40vh}.novosga-default .featured-column>footer{height:20vh;padding:5vh}.novosga-default .featured-column>footer img{height:10vh}.novosga-default .featured-column>footer h1{font-size:5vh;padding:2vh 0 0 5vh}.novosga-default .featured-column .featured-message{text-align:center}.novosga-default .featured-column .featured-message .title{font-size:30vh;font-weight:700}.novosga-default .featured-column .featured-message .description,.novosga-default .featured-column .featured-message .subtitle{font-size:10vh}.novosga-default .history-column{height:100vh}.novosga-default .history-column>header{height:80vh;padding:1rem 0}.novosga-default .history-column>footer{height:20vh;padding:1rem 0;text-align:center;background:rgba(0,0,0,.1)}.novosga-default .history-column *{color:#2c3e50}.novosga-default .history-column .title{text-align:center;font-weight:700}.novosga-default .history-column .message{background-color:transparent;border-left:8px solid rgba(0,0,0,.3);padding-left:2rem;margin-bottom:1rem}.novosga-default .history-column .empty p{font-style:italic;text-align:center}.novosga-default .history-column .history .message{background:none}.novosga-default .history-column .history .message span{text-align:left;display:block}.novosga-default .history-column .history .message .title{font-size:8vh;font-weight:700}.novosga-default .history-column .history .message .subtitle{font-size:4vh;font-style:italic}", ""])
 }, function (e, t, n) {
   "use strict";
   var r = n(42);
@@ -22353,7 +22377,7 @@ function numeroPorExtenso(n) {
         n = e.commit;
       return new je.a((function (e, r) {
         new Fe.a(t.config.server, null, t.config.retries).messages(t.auth.accessToken, t.config.unity, t.config.services).then((function (t) {
-          if (t.length) {
+          if (t.length && t[0] && null != t[0].id) {
             var r = function (e) {
               return {
                 id: e.id,
@@ -22393,8 +22417,9 @@ function numeroPorExtenso(n) {
           e.apiInfo = t || {}
         },
         newMessage: function (e, t) {
+          if (!t || null == t.id) return;
           if (e.messages.length) {
-            if (e.messages[0].id === t.id) return;
+            if (e.messages[0] && e.messages[0].id === t.id) return;
             for (var n, a = 0; a < e.messages.length; a++)
               if (r(n = e.messages[a], t)) {
                 e.messages.splice(e.messages.indexOf(n), 1);
