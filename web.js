@@ -7257,7 +7257,17 @@ function numeroPorExtenso(n) {
           "background-color": e.color("footerBgColor", "pageBgColor"),
           color: e.color("footerFontColor", "pageFontColor")
         }
-      }, [e._m(1), e._v(" "), n("div", {
+      }, [n("div", {
+        staticClass: "col-31"
+      }, [n("div", {
+        staticClass: "logo-container"
+      }, [n("img", {
+        staticClass: "footer-logo",
+        attrs: {
+          src: e.logoUrl || "static/images/logo.png",
+          alt: "Logo"
+        }
+      })])]), e._v(" "), n("div", {
         staticClass: "col-31",
         style: {
           "background-color": e.color("footerBgColor", "pageBgColor"),
