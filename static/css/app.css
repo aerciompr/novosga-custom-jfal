@@ -9,16 +9,22 @@ textarea,
   font-family: "Century Gothic", CenturyGothic, "Apple Gothic", "Segoe UI", Arial, sans-serif !important;
 }
 
-.novosga-default .grid-container .footer-row div .logo-container img.footer-logo {
-  object-fit: contain;
-}
-
-.novosga-default .grid-container .footer-row div:first-child {
-  justify-content: center !important;
+.novosga-default .grid-container .video-content {
   padding-left: 0 !important;
+  overflow: hidden !important;
 }
 
-.novosga-default .grid-container .footer-row .logo-container {
-  width: 100%;
-  justify-content: center !important;
+.novosga-default .grid-container .video-content .video-container {
+  width: 62vw !important;
+  max-width: 62vw !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+.novosga-default .grid-container .video-content .video-container video,
+.novosga-default .grid-container .video-content .video-container iframe {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  display: block !important;
 }
