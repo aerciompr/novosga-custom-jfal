@@ -31,9 +31,20 @@ textarea,
 
 .novosga-default .featured-message .client-name,
 .novosga-default .featured-container .client-name {
-  font-size: 7vh !important;
+  font-size: clamp(2.2vh, 4.2vw, 6.5vh) !important;
   font-weight: 700 !important;
   line-height: 1.05 !important;
+  width: 92% !important;
+  max-width: 92% !important;
+  margin: 0 auto 0.6vh !important;
+  text-align: center !important;
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+  hyphens: auto !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
 }
 
 .novosga-default .featured-message .title,
