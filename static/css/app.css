@@ -28,3 +28,16 @@ textarea,
   object-fit: contain;
   display: block !important;
 }
+
+.novosga-default .featured-message .client-name,
+.novosga-default .featured-container .client-name {
+  font-size: 7vh !important;
+  font-weight: 700 !important;
+  line-height: 1.05 !important;
+}
+
+.novosga-default .featured-message .title,
+.novosga-default .featured-container .title {
+  font-size: 4.2vh !important;
+  line-height: 1 !important;
+}
